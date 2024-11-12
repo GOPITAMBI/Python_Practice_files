@@ -12,8 +12,7 @@
 # Boolean Type:	bool
 # Binary Types:	bytes, bytearray, memoryview
 # None Type:	NoneType
-from pandas.core.interchange.utils import dtype_to_arrow_c_fmt
-from pywin.mfc.dialog import PrintDialog
+
 
 a = "Hello World"
 b = 20
