@@ -11,6 +11,18 @@ print(Dm)
 
 #Drop the variables
 Dm1=Dm.drop(['Sex','Age'],axis=1)
+
 #Rename the variables
 Dm1=Dm1.rename(columns={'sexnew':'Sex','Agenew':'Age'})
 print(Dm1)
+
+#Store variables in required order
+Dm2=Dm1.iloc[:,[0,5,4,1,2,3]]
+print(Dm2)
+
+
+#Replace missing vales
+saleinf=pd.read_csv('D:/programs/Python/pythonProjectby_GT/Data/data.csv')
+#SA=saleinf.fillna(0)
+SA=saleinf.fillna(method='ffill')
+print(SA)
