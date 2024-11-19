@@ -26,3 +26,4 @@ saleinf=pd.read_csv('D:/programs/Python/pythonProjectby_GT/Data/data.csv')
 #SA=saleinf.fillna(0)
 SA=saleinf.fillna(method='ffill')
 print(SA)
+
