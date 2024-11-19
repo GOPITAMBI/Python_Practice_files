@@ -1,3 +1,5 @@
+from optparse import Values
+
 import pandas as pd
 
 #Import the data
@@ -24,3 +26,8 @@ print(saleinf)
 #Convert vertical to horizontal shape
 saletr=saleinf.pivot(index='prdcode',columns='month',values='sale')
 print(saletr)
+
+#using melt function
+equity=pd.read_csv("D:/programs/Python/pythonProjectby_GT/Data/equity.csv")
+equity1=pd.melt(equity,id_vars='Date',value_vars=('Open','Low','High','Close'),var_name='Time',value_name='price')
+print(equity1)
